@@ -1,5 +1,5 @@
 package com.bookstoredb.entity;
-// Generated 20 Mar, 2020 4:39:28 AM by Hibernate Tools 5.2.12.Final
+// Generated 20 Mar, 2020 4:53:43 PM by Hibernate Tools 5.2.12.Final
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
