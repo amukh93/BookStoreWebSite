@@ -1,28 +1,27 @@
-package com.bookstore.test;
+package com.bookstore.entity;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import com.bookstore.entity2.Users;
+import com.bookstoredb.entity.Category;
 
-public class UserTest {
+public class CategoryTest {
 
 	public static void main(String[] args) {
 		
+		Category newCat = new Category("Test Cat ");
 		
-		Users user = new Users ();
-		user.setEmail("tesemail@tesdomain.tst");
-		user.setPassword("testPwd");
-		user.setFullName("fullName");
 		
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("BookStoreWebsite");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		entityManager.persist(user);
+		entityManager.persist(newCat);
 		entityManager.getTransaction().commit();
 		entityManager.close();
 		entityManagerFactory.close();
+		
 	}
 
 }
